@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
-import qs from 'qs';
 import { getWeatherReportstart } from "../redux/actions/weatherActions";
 import  WeatherComponent  from "../components/WeatherComponent";
 
@@ -17,7 +16,8 @@ const WeatherListing = () => {
       .catch((err) => {
         console.log("Error", err);
       });
-    dispatch(getWeatherReportstart(response.data.location.name));
+    console.log("api",response.data)
+    dispatch(getWeatherReportstart(response.data));
   };
 
   useEffect(() => {

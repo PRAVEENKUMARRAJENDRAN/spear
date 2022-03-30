@@ -2,7 +2,9 @@ import { actionTypes } from '../constants/actionTypes';
 
 
 const initalState = {
-    weatherReport: []
+    weatherReport: [
+        
+    ]
 }
 
 
